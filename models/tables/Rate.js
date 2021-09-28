@@ -15,7 +15,9 @@ Rate.init(
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
-            len: [1, 5],
+          isNumeric: true,
+          max: 5,
+          min: 1
           },
     },
     reason: {
