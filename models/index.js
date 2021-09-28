@@ -14,3 +14,11 @@ Genre.hasMany(Book, {
     foreignKey: 'genre_id',
     onDelete: 'CASCADE'
 })
+
+Book.belongsTo(User, {
+    foreignKey: 'user_id'
+})
+
+User.hasMany(Book, {
+    foreignKey: 'user_id'
+})
