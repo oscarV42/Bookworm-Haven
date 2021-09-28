@@ -58,3 +58,12 @@ User.hasMany(Rate, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
 })
+
+module.exports = {
+    User,
+    Genre,
+    Book, 
+    Rate,
+    Post, 
+    Comment
+};
