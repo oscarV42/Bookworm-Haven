@@ -49,3 +49,12 @@ Post.hasMany(Comment, {
     foreignKey: 'post_id',
     onDelete: 'CASCADE'
 })
+
+Rate.belongsTo(User, {
+    foreignKey: 'user_id'
+})
+
+User.hasMany(Rate, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+})
