@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS bookhaven_db;
+CREATE DATABASE bookhaven_db;
