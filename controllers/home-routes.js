@@ -7,6 +7,7 @@ router.get('/', async (req, res) => {
     try {
       res.render('homepage', {
         loggedIn: req.session.loggedIn,
+        username: req.session.username,
       });
     } catch (err) {
       console.log(err);
@@ -25,4 +26,8 @@ router.get('/login', (req, res) => {
 router.get('/sign-up', (req, res) => {
     res.render('sign-up');
 });
+
+
+
+
 module.exports = router;
