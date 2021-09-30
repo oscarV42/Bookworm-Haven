@@ -1,5 +1,5 @@
 const {  Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../../config/connection');
 
 class Genre extends Model {}
 
@@ -18,6 +18,8 @@ Genre.init(
   },
   {
     sequelize,
+    timestamps: false,
+    freezeTableName: true,
     modelName: 'genre',
     underscored: true,
   }
