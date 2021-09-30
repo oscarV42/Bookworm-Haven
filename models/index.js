@@ -6,6 +6,10 @@ const Genre = require('./tables/Genre');
 const Comment = require('./tables/Comment');
 const Rate  = require('./tables/Rate');
 
+Book.hasMany(Post, {
+    foreignKey: 'book_id'
+})
+
 Book.belongsTo(Genre, {
     foreignKey: 'genre_id'
 })
