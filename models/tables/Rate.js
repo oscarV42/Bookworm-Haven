@@ -35,6 +35,8 @@ Rate.init(
   },
   {
     sequelize,
+    timestamps: false,
+    freezeTableName: true,
     modelName: 'rate',
     underscored: true,
   }

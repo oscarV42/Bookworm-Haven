@@ -44,7 +44,7 @@ Book.init(
         references: {
             model: 'genre',
             key: 'id',
-            unique: 'false'
+            unique: false
         }
     }
   },
