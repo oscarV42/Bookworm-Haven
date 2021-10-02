@@ -53,6 +53,6 @@ const bookData = [
     },
 ];
 
-const seedBook = () => Genre.bulkCreate(bookData);
+const seedBook = () => Book.bulkCreate(bookData);
 
 module.exports = seedBook;

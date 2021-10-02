@@ -7,7 +7,7 @@ const genreData = [
     },
     {
         id: 2,
-        username: "Classic",
+        name: "Classic",
     },
     {
         id: 3,

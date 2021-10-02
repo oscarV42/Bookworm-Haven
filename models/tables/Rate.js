@@ -32,6 +32,14 @@ Rate.init(
           unique: 'false'
         }
       },
+      book_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'book',
+          key: 'id',
+          unique: false
+        }
+      }
   },
   {
     sequelize,

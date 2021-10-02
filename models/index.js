@@ -63,6 +63,15 @@ User.hasMany(Rate, {
     onDelete: 'CASCADE'
 })
 
+Rate.belongsTo(Book, {
+    foreignKey: 'book_id'
+});
+
+Book.hasMany(Rate, {
+    foreignKey: 'book_id',
+    onDelete: 'CASCADE'
+})
+
 module.exports = {
     User,
     Genre,
