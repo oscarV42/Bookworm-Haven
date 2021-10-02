@@ -3,7 +3,7 @@ const { Genre } = require('../models');
 const genreData = [
     {
         id: 1,
-        username: "Action and Adventure",
+        name: "Action and Adventure",
     },
     {
         id: 2,
@@ -11,35 +11,39 @@ const genreData = [
     },
     {
         id: 3,
-        username: "Comic",
+        name: "Comic",
     },
     {
         id: 4,
-        username: "Mystery",
+        name: "Mystery",
     },
     {
         id: 5,
-        username: "Fantasy",
+        name: "Fantasy",
     },
     {
         id: 6,
-        username: "Historical Fiction",
+        name: "Historical Fiction",
     },
     {
         id: 7,
-        username: "Horror",
+        name: "Horror",
     },
     {
         id: 8,
-        username: "Romance",
+        name: "Romance",
     },
     {
         id: 9,
-        username: "Science Fiction",
+        name: "Science Fiction",
     },
     {
         id: 10,
-        username: "Thriller",
+        name: "Thriller",
+    },
+    {
+        id: 11,
+        name: "Fiction",
     },
 ];
 

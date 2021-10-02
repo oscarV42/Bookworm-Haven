@@ -23,7 +23,7 @@ Book.init(
         type: DataTypes.STRING,
         allowNull: false
     },
-    copyright: {
+    publisher: {
         type: DataTypes.STRING,
         allowNull: false
     },
