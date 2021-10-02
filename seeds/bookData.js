@@ -2,6 +2,7 @@ const { Book } = require('../models');
 
 const bookData = [
     {
+        id: 1,
         title: 'The Adventures of Huckleberry Finn',
         author: 'Mark Twain',
         publisher: 'Chatto & Windus / Charles L. Webster And Company.',
@@ -10,6 +11,7 @@ const bookData = [
         genre_id: 6
     },
     {
+        id: 2,
         title: 'The Great Gatsby',
         author: 'F. Scott Fitzgerald',
         publisher: "Charles Scribner's Sons",
@@ -19,6 +21,7 @@ const bookData = [
         
     },
     {
+        id: 3,
         title: 'Harry Potter and the Goblet of Fire',
         author: 'J. K. Rowling',
         publisher: "Bloomsbury (UK)",
@@ -27,6 +30,7 @@ const bookData = [
         genre_id: 5
     },
     {
+        id: 4,
         title: 'Mr. Mercedes',
         author: 'Stephen King',
         publisher: "Simon & Schuster",
@@ -35,6 +39,7 @@ const bookData = [
         genre_id: 10
     },
     {
+        id: 5,
         title: 'Finders Keepers',
         author: 'Stephen King',
         publisher: "Simon & Schuster",
@@ -44,6 +49,7 @@ const bookData = [
         
     },
     {
+        id: 6,
         title: 'A Tale of Two Cities',
         author: 'Charles Dickens',
         publisher: "London: Chapman & Hall",
