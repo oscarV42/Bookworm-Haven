@@ -37,18 +37,18 @@ function displayResult(data) {
         card.appendChild(img);
 
         var cardAuthor = document.createElement('div');
-        cardAuthor.textContent = `Author: ${data.items[i].volumeInfo.authors[0]}` ;
+        cardAuthor.textContent = `Author: ${data.items[i].volumeInfo.authors[0]}`;
         card.appendChild(cardAuthor);
 
         var cardGenre = document.createElement('div');
-        cardGenre.textContent = `Genre: ${data.items[i].volumeInfo.categories[0]}` ;
+        cardGenre.textContent = `Genre: ${data.items[i].volumeInfo.categories[0]}`;
         card.appendChild(cardGenre);
 
         var cardAddFav = document.createElement('button');
         cardName.setAttribute("class", "card button");
-        cardAddFav.textContent = 'Add to Favorites' ;
+        cardAddFav.textContent = 'Add to Favorites';
         cardAddFav.tagName = data.items[i].volumeInfo.title;
-        cardAddFav.addEventListener("click", addToFavorite);   
+        cardAddFav.addEventListener("click", addToFavorite);
         card.appendChild(cardAddFav);
 
         imageContainerEl.appendChild(card);
@@ -67,18 +67,26 @@ const addToFavorite = (e) => {
         publishedDate: bookDetails.publishedDate,
         genre: bookDetails.categories[0],
         img: bookDetails.imageLinks?.thumbnail
-      };
-    
-      console.log(newFavorite);
-      saveFavorite(newFavorite);
+    };
+
+    console.log(newFavorite);
+    saveFavorite(newFavorite);
 };
 
-const saveFavorite = (newFavorite) =>
-  fetch('/book/', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(newFavorite),
-  });
+async function saveFavorite(newFavorite) {
+
+    const response = await fetch('/book/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newFavorite),
+    });
+
+    if (response.ok) {
+        alert("Successfully added to Favorites");
+    } else {
+        alert(response.statusText);
+    }
+};
 

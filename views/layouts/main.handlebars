@@ -12,13 +12,14 @@
 <body>
     <nav>
     <a href = "/">BOOKWORM-HAVEN</a>
-    <a href="/">Home</a>
     <a href = "/">Blog</a>
     {{#if loggedIn}}
-    <a href="/">MyBookList</a>
+    <a href="/search">Home</a>
+    <a href="/book">MyBookList</a>
     Logged-In User: {{username}}
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
+    <a href="/">Home</a>
     <a href="/login">Login</a>
     {{/if}}
   </nav>
