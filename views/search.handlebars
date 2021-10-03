@@ -1,0 +1,25 @@
+{{!-- i beleive this view is for Searching for the books and displaying the book list:- Commented by Jyothy --}}
+
+{{!-- I am going to hardcode the data for my Api creation --}}
+{{!-- going to create search.js --}}
+<main>
+    <h3>Search Books</h3>
+    <form>
+        <input id="booktitle" placeholder="Enter a book title to search" class="form-input" name="search-title" />
+        <button type="submit" class="btn" onclick="titleHandler(event)">Search</button>
+    </form>
+    <div>
+        <h5>Search books by Genre</h5>
+        <button type="submit" id="Fiction" onclick="genreHandler(event, 'Fiction')">Fiction</button>
+        <button type="submit" id="Science" onclick="genreHandler(event, 'Science')">Science</button>
+        <button type="submit" id="Comic" onclick="genreHandler(event, 'Comic')">Comic</button>
+    </div>
+    <div>
+        <h6>Search Result:</h6>
+        <div id="imageContainer" class="card-main">
+        </div>
+    </div>
+</main>
+
+
+<script src="./js/search.js"></script>

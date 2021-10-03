@@ -15,8 +15,8 @@
     <a href="/">Home</a>
     <a href = "/">Blog</a>
     {{#if loggedIn}}
-    {{username}}
-     {{user_id}}
+    <a href="/">MyBookList</a>
+    Logged-In User: {{username}}
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <a href="/login">Login</a>

@@ -1,7 +1,7 @@
 // import important parts of sequelize library
 const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
-const sequelize = require('../config/connection');
+const sequelize = require('../../config/connection');
 
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Book extends Model {}
@@ -21,15 +21,28 @@ Book.init(
     },
     author: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true,
+        defaultValue: ''
     },
-    copyright: {
+    publisher: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true,
+        defaultValue: ''
+    },
+    publishedDate: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ''
+    },
+    genre: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ''
     },
     img: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true,
+        defaultValue: ''
     },   
     user_id: {
       type: DataTypes.INTEGER,
@@ -38,14 +51,6 @@ Book.init(
         key: 'id',
         unique: 'false'
       }
-    },
-    genre_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'genre',
-            key: 'id',
-            unique: 'false'
-        }
     }
   },
   {
