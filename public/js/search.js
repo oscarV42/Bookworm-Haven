@@ -33,15 +33,17 @@ function displayResult(data) {
         card.appendChild(cardName);
 
         var img = document.createElement('img');
-        img.src = data.items[i].volumeInfo.imageLinks?.thumbnail;
+        if(data.items[i].volumeInfo.imageLinks?.thumbnail !== undefined){
+            img.src = data.items[i].volumeInfo.imageLinks?.thumbnail;
+        }
         card.appendChild(img);
 
         var cardAuthor = document.createElement('div');
-        cardAuthor.textContent = `Author: ${data.items[i].volumeInfo.authors[0]}`;
+        cardAuthor.textContent = `Author: ${data.items[i].volumeInfo.authors?.[0]}`;
         card.appendChild(cardAuthor);
 
         var cardGenre = document.createElement('div');
-        cardGenre.textContent = `Genre: ${data.items[i].volumeInfo.categories[0]}`;
+        cardGenre.textContent = `Genre: ${data.items[i].volumeInfo.categories?.[0]}`;
         card.appendChild(cardGenre);
 
         var cardAddFav = document.createElement('button');
