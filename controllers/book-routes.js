@@ -34,6 +34,37 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
+router.get('/:id', withAuth, async (req, res) => {
+  try {
+    const dbBookData = await Book.findOne({
+      where: {
+        id: req.params.id
+      },
+      attributes: [
+        'id',
+        'title',
+        'author',
+        'publisher',
+        'published_date',
+        'genre'
+      ],
+      include: [
+        {
+          model: User,
+          attributes: ['username']
+        },
+      ]
+    });
+
+    const currentBook = dbBookData.get({ plain: true });
+    console.log("Current book:", currentBook);
+    res.render('post', { currentBook, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.post('/', withAuth, async (req, res) => {
   try {
     const dbPostData = await Book.create({

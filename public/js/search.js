@@ -3,8 +3,12 @@ async function genreHandler(event, genre) {
 
     const api_url = `/search/genre/${genre}`;
     const response = await fetch(api_url);
-    const json = await response.json();
-    displayResult(json);
+    if (response.ok) {
+        const json = await response.json();
+        displayResult(json);
+    } else {
+        alert(response.statusText);
+    }
 }
 
 async function titleHandler(event) {
@@ -13,8 +17,12 @@ async function titleHandler(event) {
     const title = document.querySelector('input[name="search-title"]').value;
     const api_url = `/search/title/${title}`;
     const response = await fetch(api_url);
-    const json = await response.json();
-    displayResult(json);
+    if (response.ok) {
+        const json = await response.json();
+        displayResult(json);
+    } else {
+        alert(response.statusText);
+    }
 }
 
 var imageContainerEl = document.getElementById("imageContainer");
@@ -33,7 +41,7 @@ function displayResult(data) {
         card.appendChild(cardName);
 
         var img = document.createElement('img');
-        if(data.items[i].volumeInfo.imageLinks?.thumbnail !== undefined){
+        if (data.items[i].volumeInfo.imageLinks?.thumbnail !== undefined) {
             img.src = data.items[i].volumeInfo.imageLinks?.thumbnail;
         }
         card.appendChild(img);
