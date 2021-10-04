@@ -11,7 +11,7 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    body: {
+    commentDescription: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -23,20 +23,19 @@ Comment.init(
           unique: 'false'
         }
       },
-      post_id: {
-          type: DataTypes.INTEGER,
-          references: {
-              model: 'post',
-              key: 'id',
-              unique: false,
-          }
-      },
+    post_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'post',
+            key: 'id',
+            unique: false,
+        }
+    },
   },
   {
     sequelize,
-    timestamps: false,
-    freezeTableName: true,
     modelName: 'comment',
+    freezeTableName: true,
     underscored: true,
   }
 );

@@ -7,18 +7,22 @@
   <title>BookWorm-Haven</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav>
-    <a href = "/">BOOKWORM-HAVEN</a>
-    <a href="/">Home</a>
-    <a href = "/">Blog</a>
+    <a>BOOKWORM-HAVEN</a>
+    <a href = "/blog">Blog</a>
     {{#if loggedIn}}
-    {{username}}
-     {{user_id}}
+    <a href="/search">Search</a>
+    <a href="/book">MyBookList</a>
+    Logged-In User: {{username}}
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
+    <a href="/">Home</a>
     <a href="/login">Login</a>
     {{/if}}
   </nav>
@@ -33,8 +37,10 @@
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.trunk.min.js" integrity="sha512-WKGZ4lwjo3ZSZk9MppTAgaSeUz5+dF6SjTrMulCI3WBdEmIXBu+A4eVyTiCOmXCM0KU/sGJbMWfx35Fea/7x8w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/public/js/vanta.js"> </script>
 </body>
 
 
