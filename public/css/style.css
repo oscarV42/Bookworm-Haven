@@ -52,6 +52,7 @@ nav ul a:hover {
   color: black;
   font-size: 20px;
   cursor: pointer;
+  margin-left: 65px;
 }
 
 #nav-item:hover {
