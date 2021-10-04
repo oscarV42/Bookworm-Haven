@@ -11,7 +11,7 @@ const commentRoutes = require('./comment-routes');
 
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
-router.use('/blogs', blogRoutes); 
+router.use('/blog', blogRoutes); 
 router.use('/book', bookRoutes)
 router.use('/search', searchRoutes);
 router.use('/post', postRoutes);
