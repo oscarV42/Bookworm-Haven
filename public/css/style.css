@@ -44,17 +44,35 @@ nav{
   box-shadow: none !important;
 }
 
+nav ul a:hover {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
 #nav-item {
-  color: black !important;
+  color: black;
   font-size: 20px;
   cursor: pointer;
 }
 
-   .intro-text{
-    position: absolute;
-    top: 35%;
-    margin-left: 5%;
+#nav-item:hover {
+  transition: 0.5s;
+  color: var(--accent);
+  font-size: 25px;
+}
+
+.intro-text{
+  position: absolute;
+  top: 35%;
+  margin-left: 5%;
 } 
+
+.brand-logo{
+  margin-left: 15px;
+  font-size: 35px;
+  color: black !important;
+}
+
+
 
 .intro-text h2 {
   font-size: 60px;
