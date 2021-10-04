@@ -13,28 +13,29 @@
 </head>
 
 <body>
-    <nav>
-    <a>BOOKWORM-HAVEN</a>
-    <a href = "/blog">Blog</a>
-    {{#if loggedIn}}
-    <a href="/search">Search</a>
-    <a href="/book">MyBookList</a>
-    Logged-In User: {{username}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="/">Home</a>
-    <a href="/login">Login</a>
-    {{/if}}
-  </nav>
-
+    
 
   <nav>
     <div class="nav-wrapper">
+
       <a href="/" id="nav-item" href="#" class="brand-logo"> Bookworm Haven </a>
+
+
       <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      <li><a href="/blog" id="nav-item" class="forumBtn"> Forums </a></li>  
+        {{#if loggedIn}}
+         <li> <a href="/search" id="nav-item">Search</a> </li>
+         <li> <a href="/book" id="nav-item">MyBookList</a> </li>
+         <li id="nav-item"> Logged-In User: {{username}} </li>
+        <a id="logout nav-item" class="btn-no-style">Logout</a>
+        {{else}}
+       
         <li><a href="/login" id="nav-item" class="loginBtn"> Log-in </a></li>
+
         <li><a href="/sign-up" id="nav-item" class="signupBtn"> Sign-up </a></li>
-        <li><a href="/blog" id="nav-item" class="forumBtn"> Forums </a></li>
+      {{/if}}  
+        
       </ul>
     </div>
   </nav>
