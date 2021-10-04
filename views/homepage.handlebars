@@ -1,11 +1,40 @@
-<h4>Homepage</h4>
-<h5>TODO: Design the homepage</h5>
+<body style="overflow:hidden;">
+<div id="vanta-canvas">
+
+</div>
+
+<div class="valign-wrapper">
+
+    <div class="intro-text">
+        <h2> Read. Review. Discuss.</h2>
+        <p> A safe place for all Bookworms</p>
+    </div>   
+
+    <div class= "about-text  hide-on-med-and-down">
+        <h2> Get Started and join the <span>community.</span></h2>
+        <a href="/login"> Get Started </a>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.trunk.min.js" integrity="sha512-WKGZ4lwjo3ZSZk9MppTAgaSeUz5+dF6SjTrMulCI3WBdEmIXBu+A4eVyTiCOmXCM0KU/sGJbMWfx35Fea/7x8w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+      VANTA.TRUNK({
+  el: "#vanta-canvas",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 0.5,
+  color: 0x00AAB6,
+  backgroundColor: 0xffffff,
+  chaos: 2.5,
+  spacing: 0.20
+      })
+  </script>
 
 
-{{!-- <article class="post">
-<h1> Blogs: </h1>
-    {{#each posts as |post| }}
-        {{> post-info post}}
-    {{/each}}
-
-</article> --}}
+</body>
