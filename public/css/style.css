@@ -69,8 +69,8 @@ nav ul a:hover {
 
 .brand-logo{
   margin-left: 15px;
-  font-size: 35px;
-  color: black !important;
+  font-size: 30px !important;
+  color: var(--accent) !important;
 }
 
 
