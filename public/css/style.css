@@ -35,6 +35,20 @@
     height:100%;
    }
 
+   .nav-wrapper {
+    border-bottom: 2px solid var(--accent);
+}
+
+nav{
+  background-color: transparent;
+  box-shadow: none !important;
+}
+
+#nav-item {
+  color: black !important;
+  font-size: 20px;
+  cursor: pointer;
+}
 
    .intro-text{
     position: absolute;
