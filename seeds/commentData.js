@@ -2,12 +2,12 @@ const { Comment } = require('../models');
 
 const commentData = [
     {
-        body: "There are many themes portrayed in this novel, some of which include sacrifice, social classes, and the ever-present possibility of resurrection",
+        commentDescription: "There are many themes portrayed in this novel, some of which include sacrifice, social classes, and the ever-present possibility of resurrection",
         user_id: 2,
         post_id: 1
     },
     {
-        body: "I see your point but to be frank the Mercedes killer doesn't seem to be a person to contain the hatred and coldness inside for long. So the careless following crimes of Brady Hartsfield fit the character of a serial killer.",
+        commentDescription: "I see your point but to be frank the Mercedes killer doesn't seem to be a person to contain the hatred and coldness inside for long. So the careless following crimes of Brady Hartsfield fit the character of a serial killer.",
         user_id: 4,
         post_id: 2
     },
