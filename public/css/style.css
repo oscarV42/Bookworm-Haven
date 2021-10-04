@@ -35,7 +35,7 @@
     height:100%;
    }
 
-   .nav-wrapper {
+   /* .nav-wrapper {
     border-bottom: 2px solid var(--accent);
 }
 
@@ -48,7 +48,7 @@ nav{
   color: black !important;
   font-size: 20px;
   cursor: pointer;
-}
+} */
 
    .intro-text{
     position: absolute;
