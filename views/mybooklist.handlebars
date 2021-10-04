@@ -1,0 +1,11 @@
+<article class="mybooklist">
+    <h1> My Book list: </h1>
+    {{#each mybooks as |mybook| }}
+    <li>
+        {{mybook.title}}
+        - <i>by  {{mybook.author}}</i>
+        <a href="/book/{{mybook.id}}">Add Post</a>
+    </li>
+    {{/each}}
+</article>
+

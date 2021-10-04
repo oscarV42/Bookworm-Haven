@@ -11,11 +11,7 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    body: {
+    postDescription: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -28,19 +24,18 @@ Post.init(
         }
       },
     book_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'book',
-        key: 'id',
-        unique: false
-      }
-    }
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'book',
+          key: 'id',
+          unique: 'false'
+        }
+      },
   },
   {
     sequelize,
-    timestamps: false,
-    freezeTableName: true,
     modelName: 'post',
+    freezeTableName: true,
     underscored: true,
   }
 );

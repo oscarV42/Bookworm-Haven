@@ -1,0 +1,11 @@
+<main class="post">
+  <h3>Add New Post</h3>
+  <div>
+    <label class="form-label" for="content">Book name: {{currentBook.title}}</label>
+    <textarea id="content" name="content" class="form-input w-100" aria-label="With textarea" autofocus="true"
+      placeholder="What's on your mind?"></textarea>
+    <button type="submit" class="w-100 btn btn-lg btn-info mb-3" onclick="postHandler(event)">Create</button>
+  </div>
+</main>
+
+<script src="/js/post.js"></script>

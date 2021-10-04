@@ -1,52 +1,36 @@
 // import models
 const User = require('./tables/User');
-const Genre = require('./tables/Genre');
 const Book = require('./tables/Book');
 const Post = require('./tables/Post');
 const Comment = require('./tables/Comment');
-const Rate  = require('./tables/Rate');
 
-Book.hasMany(Post, {
-    foreignKey: 'book_id'
+User.hasMany(Book, {
+    foreignKey: 'user_id'
 })
-
-Book.belongsTo(Genre, {
-    foreignKey: 'genre_id'
-})
-
-Genre.hasMany(Book, {
-    foreignKey: 'genre_id',
+User.hasMany(Post, {
+    foreignKey: 'user_id',
     onDelete: 'CASCADE'
 })
-
+User.hasMany(Comment, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+})
 Book.belongsTo(User, {
     foreignKey: 'user_id'
 })
 
-User.hasMany(Book, {
-    foreignKey: 'user_id'
+
+Book.hasMany(Post, {
+    foreignKey: 'book_id',
+    onDelete: 'CASCADE'
 })
 
 Post.belongsTo(User, {
     foreignKey: 'user_id'
 })
 
-User.hasMany(Post, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
-})
-
-Comment.belongsTo(User, {
-    foreignKey: 'user_id'
-})
-
-User.hasMany(Comment, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
-})
-
-Comment.belongsTo(Post, {
-    foreignKey: 'post_id'
+Post.belongsTo(Book, {
+    foreignKey: 'book_id'
 })
 
 Post.hasMany(Comment, {
@@ -54,20 +38,17 @@ Post.hasMany(Comment, {
     onDelete: 'CASCADE'
 })
 
-Rate.belongsTo(User, {
+Comment.belongsTo(User, {
     foreignKey: 'user_id'
 })
 
-User.hasMany(Rate, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
+Comment.belongsTo(Post, {
+    foreignKey: 'post_id'
 })
 
 module.exports = {
     User,
-    Genre,
     Book, 
-    Rate,
     Post, 
     Comment
 };
