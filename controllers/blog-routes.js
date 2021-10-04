@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
         'publisher',
         'published_date',
         'genre',
+        'img',
         'user_id',
       ],
       include: [
@@ -22,17 +23,21 @@ router.get('/', async (req, res) => {
           model: Post,
           attributes: ['postDescription', 'book_id'],
         },
+        {
+          model: User,
+          attributes: ['username'],
+        },
       ],
     });
 
-    const blog = dbBlogData.map((blog) =>
+    const books = dbBlogData.map((blog) =>
       blog.get({ plain: true })
     );
     //const blog = dbBlogData.get({ plain: true });
 
-    console.log("from Blog", blog);
+    console.log("from Blog", books);
     res.render('blog', {
-      blog,
+      books,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {

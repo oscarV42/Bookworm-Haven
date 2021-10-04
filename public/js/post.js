@@ -20,6 +20,7 @@
   
     // once our route is received properly, re-direct user to dashboard
     if (response.ok) {
+      alert('Post added successfully');
        document.location.replace('/search');
     } else {
       alert(response.statusText);
