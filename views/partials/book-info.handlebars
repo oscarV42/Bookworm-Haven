@@ -5,8 +5,15 @@
         </div>
         <div>
             <h6 class="card-title"><a class="text-info">{{title}}</a></h6>
-            <h7 class="card-subtitle mb-2 text-light">Author: {{author}}, Publisher: {{publisher}}, Published on: {{published_date}}, Genre: {{genre}}</h7>
+            <h7 class="card-subtitle mb-2 text-light">Author: {{author}}, Publisher: {{publisher}}, Published on:
+                {{published_date}}, Genre: {{genre}}</h7>
             <h8 class="card-subtitle mb-2 text-light">Posted by {{user.username}} </h8>
+        </div>
+
+        <div>
+            {{#each posts as |post|}}
+            <h8 class="card-subtitle mb-2 text-light">Posted by {{post.postDescription}} </h8>
+            {{/each}}
         </div>
     </div>
     <div class="card-body">

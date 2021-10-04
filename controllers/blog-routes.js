@@ -7,7 +7,8 @@ router.get('/', async (req, res) => {
       // where: {
       //   id: 5
       // },
-      //raw: true,
+      // raw: true,
+      // nest:true,
       attributes: [
         'id',
         'title',
@@ -30,15 +31,25 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const books = dbBlogData.map((blog) =>
-      blog.get({ plain: true })
-    );
-    //const blog = dbBlogData.get({ plain: true });
-
-    console.log("from Blog", books);
+    const books = dbBlogData.map((blog) =>{
+      const blogItems = blog.get({ plain: true})
+      if(blog.posts.length) {
+        const blogPosts = blog.posts.map((post)=>post.get({plain: true})) 
+        //console.log("From Blog",blogPosts);
+        blogItems.posts = blogPosts;
+        //console.log(blogItems)
+      }
+     //console.log(blogItems.posts)
+    return blogItems;
+  });
+    //const books = dbBlogData.get({ plain: true });
+    //console.log("Book List", books);
+books.forEach((book)=> {
+  console.log(book);
+})
+    //console.log("from Blog",dbBlogData );
     res.render('blog', {
-      books,
-      loggedIn: req.session.loggedIn,
+      books,loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);
