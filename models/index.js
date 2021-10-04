@@ -19,7 +19,6 @@ Book.belongsTo(User, {
     foreignKey: 'user_id'
 })
 
-
 Book.hasMany(Post, {
     foreignKey: 'book_id',
     onDelete: 'CASCADE'
@@ -44,15 +43,6 @@ Comment.belongsTo(User, {
 
 Comment.belongsTo(Post, {
     foreignKey: 'post_id'
-})
-
-Rate.belongsTo(Book, {
-    foreignKey: 'book_id'
-});
-
-Book.hasMany(Rate, {
-    foreignKey: 'book_id',
-    onDelete: 'CASCADE'
 })
 
 module.exports = {
