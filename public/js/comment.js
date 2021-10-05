@@ -21,7 +21,7 @@
     // once our route is received properly, re-direct user to dashboard
     if (response.ok) {
       alert('Comment added successfully');
-       document.location.replace('/search');
+       document.location.replace('/blog');
     } else {
       alert(response.statusText);
     }

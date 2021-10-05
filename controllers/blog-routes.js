@@ -22,7 +22,25 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Post,
-          attributes: ['postDescription', 'book_id'],
+          attributes: [
+            'id',
+            'postDescription',
+            'user_id',
+            'book_id',
+            'created_at',
+          ],
+          include: [
+            {
+              model: Comment,
+              attributes: [
+                'id',
+                'commentDescription',
+                'user_id',
+                'post_id',
+                'created_at',
+              ],
+            },
+          ]
         },
         {
           model: User,
@@ -31,25 +49,26 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const books = dbBlogData.map((blog) =>{
-      const blogItems = blog.get({ plain: true})
-      if(blog.posts.length) {
-        const blogPosts = blog.posts.map((post)=>post.get({plain: true})) 
-        //console.log("From Blog",blogPosts);
+    const books = dbBlogData.map((blog) => {
+      const blogItems = blog.get({ plain: true })
+      if (blog.posts.length) {
+        const blogPosts = blog.posts.map((post) => {
+          const postItems = post.get({ plain: true })
+          if (post.comments.length) {
+            const blogComments = post.comments.map((cmt) => cmt.get({ plain: true }));
+            postItems.comments = blogComments;
+          }
+          return postItems;
+        });
         blogItems.posts = blogPosts;
-        //console.log(blogItems)
       }
-     //console.log(blogItems.posts)
-    return blogItems;
-  });
-    //const books = dbBlogData.get({ plain: true });
-    //console.log("Book List", books);
-books.forEach((book)=> {
-  console.log(book);
-})
-    //console.log("from Blog",dbBlogData );
+      return blogItems;
+    });
+    books.forEach((book) => {
+      console.log(book);
+    })
     res.render('blog', {
-      books,loggedIn: req.session.loggedIn,
+      books, loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);

@@ -10,13 +10,15 @@
             <h8 class="card-subtitle mb-2 text-light">Posted by {{user.username}} </h8>
         </div>
 
+        {{#if posts.length}}
         <div>
+            <h5>Posts</h5>
             {{#each posts as |post|}}
-            <h8 class="card-subtitle mb-2 text-light">Posted by {{post.postDescription}} </h8>
+            {{> post-info post}}
             {{/each}}
         </div>
-    </div>
-    <div class="card-body">
-        <p class="card-text">{{content}}</p>
+        {{else}}
+        <h6 class="pb-2 has-text-centered noPosts">No posts for this book</h6>
+        {{/if}}
     </div>
 </div>
