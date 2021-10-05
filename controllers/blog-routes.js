@@ -39,6 +39,14 @@ router.get('/', async (req, res) => {
                 'post_id',
                 'created_at',
               ],
+              include: {
+                model: User,
+                attributes: ['username'],
+              }
+            },
+            {
+              model: User,
+              attributes: ['username'],
             },
           ]
         },
@@ -57,6 +65,7 @@ router.get('/', async (req, res) => {
           if (post.comments.length) {
             const blogComments = post.comments.map((cmt) => cmt.get({ plain: true }));
             postItems.comments = blogComments;
+            console.log('blogComments',blogComments);
           }
           return postItems;
         });
