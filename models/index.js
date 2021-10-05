@@ -19,7 +19,6 @@ Book.belongsTo(User, {
     foreignKey: 'user_id'
 })
 
-
 Book.hasMany(Post, {
     foreignKey: 'book_id',
     onDelete: 'CASCADE'
