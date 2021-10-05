@@ -1,7 +1,20 @@
 # Bookworm Haven
-An application where people can discuss, review, and search for novels.
+Bookworkm Haven is an online application where you can go to discuss, review, and search for novels. This application uses the Google Books API to deliver the world's most comprehensive index of full-text books, right at your fingertips. As a user you can save books for later and chat with other user's about thier reading experience.
+
+
 
 # User Story
-As a bookworm
-I WANT to login in to a webpage that displays my interest in Books and comments and reviews
-SO THAT I have a quick access to my favorite booklist, comments etc.
+As a user I want to login into a webpage that will give me an option to search for books, by titile, author or genere. The results will come from a comprehensive index of books and then display my results and allows me to save the book for quick future reference, share my books with other users on the websire and have conversations with other users to share our thoughts on the novels that have been read.  
+
+# Preview 
+
+# GitHub Links
+
+Live Page Link
+Project Respository Link
+Presentation Link
+
+
+# Contributors
+
+This project was completed in VS code and Terminal/GitBash by Jyothy Baby, Oscar Vizcaino, Nayef Kanaan, Yishay Daniels and Hannah Lewis from 9/25/2021 - 10/7/2021
