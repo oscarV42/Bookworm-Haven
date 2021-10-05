@@ -7,7 +7,8 @@ router.get('/', async (req, res) => {
       // where: {
       //   id: 5
       // },
-      //raw: true,
+      // raw: true,
+      // nest:true,
       attributes: [
         'id',
         'title',
@@ -21,7 +22,25 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Post,
-          attributes: ['postDescription', 'book_id'],
+          attributes: [
+            'id',
+            'postDescription',
+            'user_id',
+            'book_id',
+            'created_at',
+          ],
+          include: [
+            {
+              model: Comment,
+              attributes: [
+                'id',
+                'commentDescription',
+                'user_id',
+                'post_id',
+                'created_at',
+              ],
+            },
+          ]
         },
         {
           model: User,
@@ -30,15 +49,26 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const books = dbBlogData.map((blog) =>
-      blog.get({ plain: true })
-    );
-    //const blog = dbBlogData.get({ plain: true });
-
-    console.log("from Blog", books);
+    const books = dbBlogData.map((blog) => {
+      const blogItems = blog.get({ plain: true })
+      if (blog.posts.length) {
+        const blogPosts = blog.posts.map((post) => {
+          const postItems = post.get({ plain: true })
+          if (post.comments.length) {
+            const blogComments = post.comments.map((cmt) => cmt.get({ plain: true }));
+            postItems.comments = blogComments;
+          }
+          return postItems;
+        });
+        blogItems.posts = blogPosts;
+      }
+      return blogItems;
+    });
+    books.forEach((book) => {
+      console.log(book);
+    })
     res.render('blog', {
-      books,
-      loggedIn: req.session.loggedIn,
+      books, loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);
