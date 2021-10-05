@@ -26,10 +26,11 @@
 
       <li><a href="/blog" id="nav-item" class="forumBtn"> Forums </a></li>  
         {{#if loggedIn}}
+        <li> <button id="logout" class="btn-no-style">Logout</button></li>
          <li> <a href="/search" id="nav-item">Search</a> </li>
          <li> <a href="/book" id="nav-item">MyBookList</a> </li>
          <li id="nav-item"> Logged-In User: {{username}} </li>
-        <a id="logout nav-item" class="btn-no-style">Logout</a>
+        
         {{else}}
        
         <li><a href="/login" id="nav-item" class="loginBtn"> Log-in </a></li>
