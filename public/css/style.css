@@ -39,6 +39,10 @@
     border-bottom: 2px solid var(--accent);
 }
 
+i{
+  color: var(--accent);
+}
+
 nav{
   background-color: transparent;
   box-shadow: none !important;
@@ -56,6 +60,38 @@ nav ul a:hover {
 }
 
 #nav-item:hover {
+  transition: 0.5s;
+  color: var(--accent);
+  font-size: 25px;
+}
+
+#mob-nav-item {
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#mob-nav-item-1 {
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 32px;
+}
+
+.logoutBtn-mob{
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.logoutBtn {
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.logoutBtn:hover{
   transition: 0.5s;
   color: var(--accent);
   font-size: 25px;

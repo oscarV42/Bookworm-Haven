@@ -6,6 +6,7 @@ router.get('/', async (req, res) => {
       try {
         res.render('search', {
           loggedIn: req.session.loggedIn,
+          username: req.session.username
         });
       } catch (err) {
         console.log(err);
