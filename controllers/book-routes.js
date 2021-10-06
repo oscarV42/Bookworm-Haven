@@ -7,7 +7,8 @@ router.get('/', withAuth, async (req, res) => {
   try {
     const dbBookData = await Book.findAll({
       where: {
-        user_id: req.session.user_id
+        user_id: req.session.user_id,
+        
       },
       attributes: [
         'id',
@@ -27,7 +28,9 @@ router.get('/', withAuth, async (req, res) => {
 
     const mybooks = dbBookData.map((book) => book.get({ plain: true }));
     console.log("My favorite books:", mybooks);
-    res.render('mybooklist', { mybooks, loggedIn: req.session.loggedIn });
+    res.render('mybooklist', { 
+      mybooks, loggedIn: req.session.loggedIn,
+      username: req.session.username });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
