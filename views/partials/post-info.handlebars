@@ -3,7 +3,7 @@
         <div>
             <h6><a class="text-info">{{postDescription}}</a></h6>
             <h7>Posted By: {{user.username}} Posted on: {{format_date created_at}}  :: {{format_time created_at}}</h7>
-            <button><a href="/post/{{id}}" style="color: white;">Add Comment</a></button>
+            <a href="/post/{{id}}">Add Comment</a>
         </div>
 
         {{#if comments.length}}

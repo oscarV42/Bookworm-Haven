@@ -1,6 +1,8 @@
-    <div class="col s6 left">
-        <div class="blogImage">
-            <img class="responsive-img" src={{img}} />
+    <div class="right col s5">
+    <ul class="book-sec">
+        <li>
+        <div class="blogImage center">
+            <img class="responsive-img center" src={{img}} />
         </div>
         <div>
             <h6><a class="text-info">{{title}}</a></h6>
@@ -8,15 +10,20 @@
                 {{published_date}}, Genre: {{genre}}</h7>
             <h8>Added by: {{user.username}} </h8>
         </div>
+        <li>
+    </ul>
     </div>
-
-     <div class="col s6 right">
+        
+     <div class="col s7 left">
         {{#if posts.length}}
         <div>
-            <h5>Posts</h5>
-            {{#each posts as |post|}}
+            <h5>Post</h5>
+            <ul class="posts-list">
+          <li>  {{#each posts as |post|}}
             {{> post-info post}}
             {{/each}}
+          </li>
+          </ul>
         </div>
         {{else}}
         <h6 class="pb-2 has-text-centered noPosts">No posts for this book</h6>
