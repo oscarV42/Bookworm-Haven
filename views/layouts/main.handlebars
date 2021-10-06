@@ -47,10 +47,18 @@
   <script src="/js/mobileNav.js"></script>
 
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
+    <li><a href="/blog" id="mob-nav-item" class="forumBtn"> Forums </a></li>  
+        {{#if loggedIn}}
+         <li> <a href="/search" id="mob-nav-item">Search</a> </li>
+         <li> <a href="/book" id="mob-nav-item">MyBookList</a> </li>
+         <li id="mob-nav-item-1"> Welcome back {{username}} </li>
+         <li> <a id="logout" class="logoutBtn-mob">Logout</a> </li>
+        {{else}}
+       
+        <li><a href="/login" id="mob-nav-item" class="loginBtn"> Log-in </a></li>
+
+        <li><a href="/sign-up" id="mob-nav-item" class="signupBtn"> Sign-up </a></li>
+      {{/if}}  
   </ul>
 
 
