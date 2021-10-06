@@ -1,0 +1,20 @@
+<div class="card mb-5">
+    <div class="card-header bg-secondary">
+        <div>
+            <h6 class="card-title"><a class="text-info">{{postDescription}}</a></h6>
+            <h7 class="card-subtitle mb-2 text-light">Posted By: {{user.username}} Posted on: {{format_date created_at}}  :: {{format_time created_at}}</h7>
+            <button class="card button" ><a href="/post/{{id}}" style="color: white;">Add Comment</a></button>
+        </div>
+
+        {{#if comments.length}}
+        <div>
+            <h5>Comments</h5>
+            {{#each comments as |comment|}}
+            {{> comment-info comment}}
+            {{/each}}
+        </div>
+        {{else}}
+        <h6 class="pb-2 has-text-centered noPosts">No comment for this Post</h6>
+        {{/if}}
+    </div>
+</div>
