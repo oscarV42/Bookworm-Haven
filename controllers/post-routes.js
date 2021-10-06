@@ -8,6 +8,7 @@ router.post('/', withAuth, async (req, res) => {
       postDescription: req.body.postDescription,
       book_id: req.body.book_id,
       user_id: req.session.user_id,
+      username: req.session.username
     });
     console.log('Add new POST', dbPostData);
     res.status(200).json(dbPostData)
