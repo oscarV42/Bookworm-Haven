@@ -1,15 +1,16 @@
-<div class="card col s6">
-    <div class="card-header bg-secondary">
+    <div class="col s6 left">
         <div class="blogImage">
-            <img src={{img}} />
+            <img class="responsive-img" src={{img}} />
         </div>
         <div>
-            <h6 class="card-title"><a class="text-info">{{title}}</a></h6>
-            <h7 class="card-subtitle mb-2 text-light">Author: {{author}}, Publisher: {{publisher}}, Published on:
+            <h6><a class="text-info">{{title}}</a></h6>
+            <h7>Author: {{author}}, Publisher: {{publisher}}, Published on:
                 {{published_date}}, Genre: {{genre}}</h7>
-            <h8 class="card-subtitle mb-2 text-light">Added by: {{user.username}} </h8>
+            <h8>Added by: {{user.username}} </h8>
         </div>
+    </div>
 
+     <div class="col s6 right">
         {{#if posts.length}}
         <div>
             <h5>Posts</h5>
@@ -21,4 +22,3 @@
         <h6 class="pb-2 has-text-centered noPosts">No posts for this book</h6>
         {{/if}}
     </div>
-</div>
