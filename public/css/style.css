@@ -127,7 +127,7 @@ nav ul a:hover {
 } 
 
 
-.about-text span {
+span {
   color: var(--accent);
 }
 
