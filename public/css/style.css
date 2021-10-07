@@ -161,6 +161,14 @@ nav ul a:hover {
   margin: auto;
 }
 
+.search-form{
+  width: 100%;
+    max-width: 800px;
+    padding: 15px;
+    margin: auto;
+}
+
+
 .card-main {
   display: flex;
   margin-top: 2%;
