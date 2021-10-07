@@ -1,9 +1,9 @@
 <div class="post-sec">
     <div>
         <div>
-            <h6><a class="text-info" style="color:black">{{postDescription}}</a></h6>
+            <h5><a class="text-info" style="color:black">{{postDescription}}</a></h5>
             <h7 style="color: var(--accent)">Posted By: {{user.username}} Posted on: {{format_date created_at}}  :: {{format_time created_at}}</h7>
-            <a href="/post/{{id}}" class="comment-btn" style="margin-left: 15px ">Add Comment</a>
+            <a href="/post/{{id}}" class="comment-btn" style="margin-left: 10px ">Add Comment</a>
         </div>
 
         {{#if comments.length}}
