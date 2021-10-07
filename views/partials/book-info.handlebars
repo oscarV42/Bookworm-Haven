@@ -1,8 +1,11 @@
-    <div class="right col s5">
-    <ul class="book-sec">
+    
+    <div class="blog-sec cols 12">
+    <aside class="book-sec left col s6">
+        <h5>Book</h5>
+    <ul class="book-list">
         <li>
-        <div class="blogImage center">
-            <img class="responsive-img center" src={{img}} />
+        <div class="blogImage">
+            <img class="responsive-img" src={{img}} />
         </div>
         <div>
             <h6><a class="text-info">{{title}}</a></h6>
@@ -12,9 +15,9 @@
         </div>
         <li>
     </ul>
-    </div>
+    </aside>
         
-     <div class="col s7 left">
+     <div class="post-sec right col s6">
         {{#if posts.length}}
         <div>
             <h5>Post</h5>
@@ -29,3 +32,4 @@
         <h6 class="pb-2 has-text-centered noPosts">No posts for this book</h6>
         {{/if}}
     </div>
+</div>

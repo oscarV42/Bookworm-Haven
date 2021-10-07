@@ -1,14 +1,14 @@
 <div class="post-sec">
     <div>
         <div>
-            <h6><a class="text-info">{{postDescription}}</a></h6>
-            <h7>Posted By: {{user.username}} Posted on: {{format_date created_at}}  :: {{format_time created_at}}</h7>
-            <a href="/post/{{id}}">Add Comment</a>
+            <h6><a class="text-info" style="color:black">{{postDescription}}</a></h6>
+            <h7 style="color: var(--accent)">Posted By: {{user.username}} Posted on: {{format_date created_at}}  :: {{format_time created_at}}</h7>
+            <a href="/post/{{id}}" class="comment-btn" style="margin-left: 15px ">Add Comment</a>
         </div>
 
         {{#if comments.length}}
         <div>
-            <h5>Comments</h5>
+            <h6>Comments</h6>
             {{#each comments as |comment|}}
             {{> comment-info comment}}
             {{/each}}

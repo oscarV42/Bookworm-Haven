@@ -221,8 +221,36 @@ nav ul a:hover {
   color:purple;
 }
 
-
+.blog-sec{
+  display: flex;
+}
 
 .posts-list li{
   border: 3px solid var(--accent);
+  border-radius: 25px;
+  padding: 10px;
+  width: 80%;
 }
+
+.posts-list li:hover{
+  transform: scale(1.05);
+  transition: 1s ease-in-out;
+}
+
+.comment-btn {
+  border: 3px solid var(--accent);
+  border-radius: 5px;
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  cursor: pointer;
+  transition: 1s
+}
+
+.comment-btn:hover{
+  background-color: var(--accent);
+  color: white;
+}
+
+
