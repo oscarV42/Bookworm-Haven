@@ -8,10 +8,10 @@
             <img class="responsive-img" src={{img}} />
         </div>
         <div>
-            <h6><a class="text-info">{{title}}</a></h6>
-            <h7>Author: {{author}}, Publisher: {{publisher}}, Published on:
-                {{published_date}}, Genre: {{genre}}</h7>
-            <h8>Added by: {{user.username}} </h8>
+            <h5 class="text-info">{{title}}</h5>
+            <h6 style="color:var(--accent)">Author: {{author}}, Publisher: {{publisher}}, Published on:
+                {{published_date}}, Genre: {{genre}}</h6>
+            <h8 style="color: var(--accent)">Added by: {{user.username}} </h8>
         </div>
         <li>
     </ul>
@@ -20,7 +20,7 @@
      <div class="post-sec right col s6">
         {{#if posts.length}}
         <div>
-            <h5>Post</h5>
+            <h5 style="margin-left: 10%">Post</h5>
             <ul class="posts-list">
           <li>  {{#each posts as |post|}}
             {{> post-info post}}

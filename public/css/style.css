@@ -210,7 +210,7 @@ nav ul a:hover {
   flex: 1;
   padding: 10px;
   text-align: center;
-  width: 10%;
+  width: 15%;
   /* The client insists that images be at least 400px */
   min-width: 50px;
 }
@@ -229,7 +229,7 @@ nav ul a:hover {
   border: 3px solid var(--accent);
   box-shadow: 20px 20px var(--accent);
   padding: 10px;
-  width: 80%;
+  margin-left: 10%;
 }
 
 .posts-list li:hover{
@@ -254,10 +254,14 @@ nav ul a:hover {
 }
 
 .book-list li{
-  border-top: 2px solid var(--accent);
+  border: 2px solid var(--accent);
   box-shadow: 20px 20px var(--accent);
-  padding: 10px;
-  width: 80%;
+
+}
+
+.book-list li:hover{
+  transform: scale(1.05);
+  transition: 1s ease-in-out;
 }
 
 
