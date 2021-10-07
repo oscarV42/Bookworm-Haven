@@ -1,10 +1,18 @@
-<main class="post">
+<main class="post center">
   <h3>Add New Post</h3>
   <div>
-    <label class="form-label" for="content">Book name: {{currentBook.title}}</label>
+    <label class="form-label" style="font-size: 25px" for="content">Book name: {{currentBook.title}}</label>
     <textarea id="content" name="content" class="form-input w-100" aria-label="With textarea" autofocus="true"
-      placeholder="What's on your mind?"></textarea>
-    <button type="submit" class="w-100 btn btn-lg btn-info mb-3" onclick="postHandler(event)">Create</button>
+      placeholder="What's on your mind?" ></textarea>
+    <button type="submit" style="border: 3px solid var(--accent);
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  padding: 2px;
+  cursor: pointer;
+  transition: 1s;
+  background-color:transparent;" onclick="postHandler(event)">Create</button>
   </div>
 </main>
 
