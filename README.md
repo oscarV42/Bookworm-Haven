@@ -21,9 +21,9 @@ As a Bookworm I WANT to login into a webpage that will give me an option to sear
 
 # GitHub Links
 
-Live Page Link
-Project Respository Link
-Presentation Link
+* Live Page [Link](https://stark-wildwood-15294.herokuapp.com/)
+* Project Respository [Link](https://github.com/oscarV42/Bookworm-Haven)
+* Presentation [Link](https://docs.google.com/presentation/d/1ytKWjjJs7eRaoOsZqkFbuSjPj9f2glFyHF9e2zgXV-M/edit#slide=id.gf6016b842e_0_25)
 
 
 # Contributors
