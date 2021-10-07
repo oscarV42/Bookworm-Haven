@@ -168,6 +168,23 @@ nav ul a:hover {
     margin: auto;
 }
 
+.search-btn {
+  border: 3px solid var(--accent);
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  transition: 1s;
+  background-color: var(--accent);
+  margin-right: 15px;
+}
+
+.search-btn:hover{
+  transition: 0.5s;
+  transform: scale(1.08);
+}
 
 .card-main {
   display: flex;
