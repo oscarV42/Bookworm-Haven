@@ -1,7 +1,10 @@
-<main class="blog">
-    <h3>Blog</h3>
-    {{#each books as |book| }}
-        {{> book-info book }}
-    {{/each}}
+<main class="blog row">
+    <h3 class="center">Blog</h3>
 
+<div> 
+{{#each books as |book| }}
+{{> book-info book }}
+{{/each}}
+</div>
+    
 </main>

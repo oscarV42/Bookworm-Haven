@@ -210,9 +210,7 @@ nav ul a:hover {
   flex: 1;
   padding: 10px;
   text-align: center;
-  border-style: solid;
-  border-width: 1px;
-  width: 10%;
+  width: 15%;
   /* The client insists that images be at least 400px */
   min-width: 50px;
 }
@@ -222,3 +220,49 @@ nav ul a:hover {
   font-style: italic;
   color:purple;
 }
+
+.blog-sec{
+  display: flex;
+}
+
+.posts-list li{
+  border: 3px solid var(--accent);
+  box-shadow: 20px 20px var(--accent);
+  padding: 10px;
+  margin-left: 10%;
+}
+
+.posts-list li:hover{
+  transform: scale(1.05);
+  transition: 1s ease-in-out;
+}
+
+.comment-btn {
+  border: 3px solid var(--accent);
+  border-radius: 5px;
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  padding: 2px;
+  cursor: pointer;
+  transition: 1s
+}
+
+.comment-btn:hover{
+  background-color: var(--accent);
+  color: white;
+}
+
+.book-list li{
+  border: 2px solid var(--accent);
+  box-shadow: 20px 20px var(--accent);
+
+}
+
+.book-list li:hover{
+  transform: scale(1.05);
+  transition: 1s ease-in-out;
+}
+
+
+

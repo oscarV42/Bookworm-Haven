@@ -1,21 +1,32 @@
-<div class="card mb-5">
-    <div class="card-header bg-secondary">
+    
+    <div class="blog-sec cols 12">
+    <aside class="book-sec left col s6">
+        <h5>Book</h5>
+    <ul class="book-list">
+        <li>
         <div class="blogImage">
-            <img src={{img}} />
+            <img class="responsive-img" src={{img}} />
         </div>
         <div>
-            <h6 class="card-title"><a class="text-info">{{title}}</a></h6>
-            <h7 class="card-subtitle mb-2 text-light">Author: {{author}}, Publisher: {{publisher}}, Published on:
-                {{published_date}}, Genre: {{genre}}</h7>
-            <h8 class="card-subtitle mb-2 text-light">Added by: {{user.username}} </h8>
+            <h5 class="text-info">{{title}}</h5>
+            <h6 style="color:var(--accent)">Author: {{author}}, Publisher: {{publisher}}, Published on:
+                {{published_date}}, Genre: {{genre}}</h6>
+            <h8 style="color: var(--accent)">Added by: {{user.username}} </h8>
         </div>
-
+        <li>
+    </ul>
+    </aside>
+        
+     <div class="post-sec right col s6">
         {{#if posts.length}}
         <div>
-            <h5>Posts</h5>
-            {{#each posts as |post|}}
+            <h5 style="margin-left: 10%">Post</h5>
+            <ul class="posts-list">
+          <li>  {{#each posts as |post|}}
             {{> post-info post}}
             {{/each}}
+          </li>
+          </ul>
         </div>
         {{else}}
         <h6 class="pb-2 has-text-centered noPosts">No posts for this book</h6>
