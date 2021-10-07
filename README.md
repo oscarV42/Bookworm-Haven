@@ -1,16 +1,23 @@
 # Bookworm Haven
-Bookworkm Haven is an online application where you can go to discuss, review, and search for novels. This application uses Node Fetch, npmjs.com, vantajs, Google Books API to deliver the world's most comprehensive index of full-text books, right at your fingertips. As a user you can save books for later and chat with other user's about thier reading experience.
-
-Dependancies:
-
-
+Bookworkm Haven is an online application where you can go to discuss, review, and search for novels. This application uses Google Books API to deliver the world's most comprehensive index of full-text books, right at your fingertips. As a user you can create a favorite book list, chat with other user's about thier reading experience though blog posts and comments.
 
 # User Story
-As a user I want to login into a webpage that will give me an option to search for books, by title or genere. The results will come from a comprehensive index of books and then display my results and allows me to save the book for quick future reference, share my books with other users on the websire and have conversations with other users to share our thoughts on the novels that have been read.  
+As a Bookworm I WANT to login into a webpage that will give me an option to search for books, by title or genere. SO THAT I can have quick access to my favorite booklist, blog posts and comments. 
 
-# Preview 
+# Dependancies
 
-Node Fetch
+* Packages: Node.js, Sequelize, MYSQL2, Express, Bcrypt, Handlebars, dontenv, sessions
+* Third Party API: Google Books
+* New NPM Package Library: Node.Fetch
+* New Animation Libraries: Vantajs.com , p5js.org
+
+# Future  Development
+* Rating of novels based on our users
+* Buying option (links to purchase books)
+* Read online (snippet of book)
+* Suggestions of related books based on users' interest
+* Top 10 most favorited books
+* Book of the day
 
 # GitHub Links
 
