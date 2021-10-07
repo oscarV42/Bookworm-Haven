@@ -4,6 +4,10 @@ Bookworkm Haven is an online application where you can go to discuss, review, an
 # User Story
 As a Bookworm I WANT to login into a webpage that will give me an option to search for books, by title or genere. SO THAT I can have quick access to my favorite booklist, blog posts and comments. 
 
+# Preview
+
+![Bookworm_Haven](https://media.giphy.com/media/jlyLDVZsEMszRNLmKn/giphy.gif)
+
 # Dependancies
 
 * Packages: Node.js, Sequelize, MYSQL2, Express, Bcrypt, Handlebars, dontenv, sessions
