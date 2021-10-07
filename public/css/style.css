@@ -154,6 +154,13 @@ nav ul a:hover {
     margin: auto;
 }
 
+.form-signup {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
 .card-main {
   display: flex;
   margin-top: 2%;
@@ -274,6 +281,3 @@ textarea{
 }
 
 
-.signup-form{
-  
-}
