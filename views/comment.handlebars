@@ -1,10 +1,18 @@
-<main class="comment">
-  <h3>Add New Comment</h3>
+<main class="comment center">
+  <h3 class="center">Add New Comment</h3>
   <div>
     <label class="form-label" for="content">Post Desc: {{currentPost.postDescription}}</label>
-    <textarea id="content" name="content" class="form-input w-100" aria-label="With textarea" autofocus="true"
+    <textarea id="content" name="content"  aria-label="With textarea" autofocus="true"
       placeholder="Enter a comment"></textarea>
-    <button type="submit" class="w-100 btn btn-lg btn-info mb-3" onclick="commentHandler(event)">Create</button>
+    <button type="submit" style="border: 3px solid var(--accent);
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  padding: 2px;
+  cursor: pointer;
+  transition: 1s;
+  background-color:transparent;" onclick="commentHandler(event)">Create</button>
   </div>
 </main>
 

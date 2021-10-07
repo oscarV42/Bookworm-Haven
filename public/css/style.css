@@ -265,4 +265,10 @@ nav ul a:hover {
 }
 
 
-
+textarea{
+  border: 5px solid var(--accent) !important;
+  border-radius: 5px;
+  resize: none;
+  height: 200px;
+  margin-bottom: 25px
+}
