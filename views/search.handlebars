@@ -1,8 +1,27 @@
-<main class="search">
+<main class="search center">
     <h3>Search Books</h3>
-    <form>
-        <input id="booktitle" placeholder="Enter a book title to search" class="form-input" name="search-title" />
-        <button type="submit" class="btn" onclick="titleHandler(event)">Search</button>
+    
+    <form class="search-form">
+
+        <input id="booktitle" placeholder="Enter a book title to search" style= "border: 5px solid var(--accent);
+  border-radius: 9px;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  padding: 2px;
+  transition: 1s;
+  background-color:transparent; margin-right: 20px; margin-top: 20px; padding: 3px" name="search-title" />
+
+        <button style="border: 3px solid var(--accent);
+  border-radius: 5px;
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  padding: 2px;
+  cursor: pointer;
+  transition: 1s;
+  background-color:transparent; margin-top: 20px; padding: 3px" type="submit"  onclick="titleHandler(event)">Search</button>
+
     </form>
     <div>
         <h5>Search books by Genre</h5>
@@ -18,6 +37,8 @@
         <button class="btn" type="submit" id="Engineering" onclick="genreHandler(event, 'Engineering')">Engineering</button>
     </div>
     <div>
+    <br>
+    <br>
         <h6>Search Result:</h6>
         <div id="imageContainer" class="card-main">
         </div>
